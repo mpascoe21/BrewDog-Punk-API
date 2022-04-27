@@ -2,6 +2,7 @@ import React from 'react';
 import { Router } from '@reach/router';
 
 import Main from '../Main';
+import NotFound from '../../component/NotFound';
 
 
 const Routes = (props) => {
@@ -10,6 +11,7 @@ const Routes = (props) => {
   return (
     <Router>
       <Main path='/' beers={beers} />
+      <NotFound default />
     </Router>
   )
 }
