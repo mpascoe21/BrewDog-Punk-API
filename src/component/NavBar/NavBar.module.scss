@@ -1,3 +1,115 @@
-.check {
-  color: orange;
+@import '../../variables.scss';
+
+
+.navBar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+  padding: 0;
+  background-color: white;
+  border-bottom: 2px solid #066e72;
+
+  .logo {
+    height: 8vh;
+    max-width: 150px;
+    padding-left: $base-spacing;
+    background: transparent;
+  }
+
+  .bars {
+    color: #066e72;
+    font-size: 1.8em;
+    padding-right: $base-spacing;
+  }
+
+  .menu {  
+    position: absolute;
+    width: 60%; 
+    z-index: 5;
+    margin-top: 35vh;
+    right: 0;  
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    background-color: white;   
+  } 
+}
+
+@media screen and (min-width: 768px) {
+  .navBar {
+    .logo {
+      padding-left: $base-spacing * 2;
+    }
+
+    .bars {      
+      font-size: 2.5em;
+      padding-right: $base-spacing * 2;
+    }
+
+    .menu {
+      margin-top: 30vh;
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .navBar {
+    width: 200px;
+    height: 100%;
+    background-color: #066e72;
+    border-bottom: 0;    
+    color: $color-white;
+    padding-top: $base-spacing * 2;
+    padding-left: 0;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .logo {
+      background: transparent;
+      height: 14vh;
+      padding-left: 0;
+    }
+
+    .bars {
+      display: none;
+      color: black;
+      font-size: 1.8em;
+      padding-right: $base-spacing;
+    }
+
+    .menu {
+      //display: none;
+      width: 100%;
+      right: auto;
+      margin-top: 25vh;
+      background-color: transparent;
+      box-shadow: none;
+    }
+
+    // .largeScreenMenu {
+    //   width: 100%;
+    //   right: auto;
+    //   margin-top: 25vh;
+    //   background-color: transparent;
+    //   box-shadow: none;
+    // }
+  }
+}
+
+@media screen and (min-width: 1366px) {  
+
+}
+
+@media screen and (min-width: 1920px) {
+  .navBar {
+    width: 250px;
+
+    .logo {
+      height: 18vh;
+    }    
+  }
 }

@@ -1,0 +1,64 @@
+@import '../../variables.scss';
+
+.main {
+
+  .header {
+    margin-top: 10vh;
+    width: 100%;
+    text-align: center;
+    font-family: $font-display;
+    font-size: 2.5em;
+    font-weight: 100;
+    padding: $base-spacing * 3;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .main {
+    .header {
+    }
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  .main {
+    .header {      
+      font-size: 3.5em;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .main {
+    margin-left: 200px;
+
+    .header {
+      margin: 4vh 0;
+      font-size: 5em;
+    }
+  }
+
+}
+
+@media screen and (min-width: 1366px) {
+  .main {
+    .header {
+      font-size: 6em;
+    }
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .main {
+    margin-left: 250px;
+  
+    .header {
+      width: 100%;
+      text-align: center;
+      font-family: $font-display;
+      font-size: 7em;
+      font-weight: 100;
+    }
+  }
+}

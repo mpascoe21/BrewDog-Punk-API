@@ -1,0 +1,99 @@
+@import '../../variables.scss';
+
+.searchContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  box-shadow: rgb(111, 130, 151) 0px 3px 20px -10px; 
+
+  .searchInput {
+    width: 100%;
+    height: 100%;
+    padding-left: $base-spacing;
+    border: none;
+    background-color:  rgb(244, 241, 241);
+  }
+
+  .magnifyingGlass {
+    position: absolute;
+    right: 0;
+    color: #066e72;
+    padding-right: $base-spacing;
+    font-size: 1.2em;    
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+
+  .searchContainer {
+    //margin-top: 0;
+    //width: 50%;
+  }
+
+    .searchInput {
+      //border: none;
+      //border-bottom: 1px solid rgb(188, 187, 187);
+    }
+   
+
+    .magnifyingGlass {
+      
+    }
+}
+
+@media screen and (min-width: 768px) {
+  .searchContainer {
+    height: 50px;
+
+    .searchInput {
+      padding: 0 $base-spacing *2;
+      font-size: 1.2em;
+    }
+
+    .magnifyingGlass {
+      padding-right:  $base-spacing *2;
+      font-size: 1.8em;
+    }
+  }
+
+}
+
+@media screen and (min-width: 992px) {
+  .searchContainer {
+    margin: 0 $base-spacing;
+    width: 90%;
+    height: 40px;
+
+    .searchInput {
+      padding: 0 $base-spacing;
+      font-size: 0.8em;
+    }
+
+    .magnifyingGlass {
+      padding-right: $base-spacing;
+      font-size: 1.3 em;
+    }
+  }
+}
+
+@media screen and (min-width: 1366px) {
+
+}
+
+@media screen and (min-width: 1920px) {
+  .searchContainer {
+    margin: 0 $base-spacing;
+    width: 90%;
+
+    .searchInput {
+      padding: 0 $base-spacing;
+    }
+
+    .magnifyingGlass {
+      padding-right: $base-spacing;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@import '../../variables.scss';
+
+.filterList {
+  position: relative;    
+  background-color: #066e72;
+  padding: $base-spacing;
+  line-height: 2;
+}
+
+@media screen and (max-width: 767px) {
+
+}
+
+@media screen and (min-width: 768px) {
+  .filterList {
+    padding: $base-spacing $base-spacing * 2;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .filterList {
+    background-color: transparent;    
+  }
+}
+
+@media screen and (min-width: 1366px) {
+
+}
+
+@media screen and (min-width: 1920px) {
+
+}

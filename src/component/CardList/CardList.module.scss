@@ -1,3 +1,33 @@
-.check {
-   color: green;
+.cardList {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, 150px);
+   justify-content: center;
+   gap: 50px 25px;  
+}
+
+@media screen and (max-width: 767px) {
+
+}
+
+@media screen and (min-width: 768px) {
+  .cardList {
+    grid-template-columns: repeat(auto-fill, 200px);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .cardList {
+    gap: 50px 50px;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+
+}
+
+@media screen and (min-width: 1920px) {
+  .cardList {
+    grid-template-columns: repeat(auto-fill, 350px);
+    gap: 150px 50px;
+  }
 }
