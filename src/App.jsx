@@ -64,7 +64,6 @@ const App = () => {
     fetch(`https://api.punkapi.com/v2/beers${fetchBeersByName}${getHighABVBeers}${getClassicBeers}`)
       .then((response) => response.json())
       .then((jsonResponse) => setBeers(jsonResponse)
-        //console.log();
       );
   };
 
