@@ -35,33 +35,14 @@ const App = () => {
 
   // fullName(firstName, lastName)
 
-  const getBeersByName = searchTerm ? `?beer_name=${searchTerm}` : "";
-  const getHighABVBeers = highABVBeers ? `?abv_gt=6` : "";
-  const getClassicBeers = classicBeers ? `?brewed_before=01-2010` : "";
+  const getBeersByName = searchTerm ? `&beer_name=${searchTerm}` : ""; // & enables several api calls
+  const getHighABVBeers = highABVBeers ? `&abv_gt=6` : "";
+  const getClassicBeers = classicBeers ? `&brewed_before=01-2010` : "";
   //console.log(getHighABVBeers);
 
-  // const getBeerData = (fetchBeersByName) => {
-  //   Promise.all([
-  //     fetch(`https://api.punkapi.com/v2/beers${fetchBeersByName}`),
-  //     fetch(`https://api.punkapi.com/v2/beers${getHighABVBeers}$`),
-  //     fetch(`https://api.punkapi.com/v2/beers${getClassicBeers}`),
-  //   ])
-
-  //     .then((responses) => {
-  //       return Promise.all(
-  //         responses.map(function (response) {
-  //           return response.json();
-  //         })
-  //       );
-  //     })
-  //     .then(
-  //       (jsonResponse) => setBeers(jsonResponse)
-  //       //console.log();
-  //     );
-  // };
-
+// ?per_page=80 addded to include the '?' in the call
   const getBeerData = (fetchBeersByName) => {
-    fetch(`https://api.punkapi.com/v2/beers${fetchBeersByName}${getHighABVBeers}${getClassicBeers}`)
+    fetch(`https://api.punkapi.com/v2/beers?per_page=80${fetchBeersByName}${getHighABVBeers}$ {getClassicBeers}`)
       .then((response) => response.json())
       .then((jsonResponse) => setBeers(jsonResponse)
       );
