@@ -2,7 +2,7 @@
 
 .beerCard {
   *{
-    color: black;
+    //color: black;
   }
 
   font-family: $font-utility;
@@ -16,6 +16,12 @@
   align-items: center;
   position: relative;
   background-color: whitesmoke;
+
+  .heart {  
+    align-self: flex-end;
+    color: rgb(236, 67, 67);
+    font-size: 1.2em;
+  }
 
   .beerName {
     font-size: 1.2em;
@@ -109,6 +115,10 @@
     flex-direction: column;
     align-items: center;
     position: relative;
+
+    .heart {    
+      font-size: 1.3em;
+    }
     
     .beerName {
       font-size: 2.2em;

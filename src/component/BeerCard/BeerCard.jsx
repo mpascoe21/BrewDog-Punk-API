@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./BeerCard.module.scss";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeart as solidFaHeart } from "@fortawesome/free-solid-svg-icons";
+import { faHeart as lightFaHeart } from "@fortawesome/free-regular-svg-icons";
+
 const BeerCard = (props) => {
-  const { name, image_url, tagline, description, abv, food_pairing } =
-    props.beer;
+  const { name, image_url, tagline, description, abv, food_pairing, isFav } = props.beer;
+  const { toggleFav } = props;
+
+  const [favState, setFavState] = useState(isFav);
+
+  const handleFavClick = (e) => {
+    e.stopPropagation();
+    toggleFav(props.beer);
+    setFavState(!isFav);
+  };
+
+  const heartIcon = favState ? solidFaHeart : lightFaHeart;
 
   const shortenDescription = (description) =>
     description.length < 100
@@ -13,11 +27,13 @@ const BeerCard = (props) => {
   return (
     // <p>BeerCard work</p>
     <div className={styles.beerCard}>
+      <i className={styles.heart} onClick={handleFavClick}>
+        <FontAwesomeIcon icon={heartIcon} />
+      </i>
       <p className={styles.beerName}>{name}</p>
       <p className={styles.beerTagline}>{tagline}</p>
       <img className={styles.beerImg} src={image_url} alt={name} />
       <div className={styles.beerInfo}>
-        
         <p className={styles.beerDescripption}>
           {shortenDescription(description)}
         </p>
