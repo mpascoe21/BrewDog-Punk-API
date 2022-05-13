@@ -42,7 +42,7 @@ const App = () => {
 
 // ?per_page=80 addded to include the '?' in the call
   const getBeerData = (fetchBeersByName) => {
-    fetch(`https://api.punkapi.com/v2/beers?per_page=80${fetchBeersByName}${getHighABVBeers}$ {getClassicBeers}`)
+    fetch(`https://api.punkapi.com/v2/beers?per_page=80${fetchBeersByName}${getHighABVBeers}${getClassicBeers}`)
       .then((response) => response.json())
       .then((jsonResponse) => setBeers(jsonResponse)
       );
