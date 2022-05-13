@@ -3,11 +3,11 @@ import BeerCard from '../BeerCard/BeerCard';
 import styles from './CardList.module.scss';
 
 const CardList = (props) => {
-  const { beers } = props;
+  const { beers, toggleFav } = props;
 
   const getBeerCardJsx = (beer) => (
     <div key={beer.id}>
-      <BeerCard beer={beer} />
+      <BeerCard beer={beer} toggleFav={toggleFav} />
     </div>
   );
 

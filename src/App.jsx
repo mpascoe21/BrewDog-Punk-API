@@ -23,7 +23,11 @@ const App = () => {
     setClassicBeers(!classicBeers);
   };
 
-  const filterBeersByPh = beers.filter((beer) => beer.ph < 3);
+  //const filterBeersByPh = beers.filter((beer) => beer.ph < 3);
+
+  const toggleFav = (beer) => {
+    beer.isFav = !beer.isFav;
+  }
 
   //setFilter(!highABVBeers)
   // let firstName = 'Jake';
@@ -42,22 +46,31 @@ const App = () => {
 
 // ?per_page=80 addded to include the '?' in the call
   const getBeerData = (fetchBeersByName) => {
-    fetch(`https://api.punkapi.com/v2/beers?per_page=80${fetchBeersByName}${getHighABVBeers}$ {getClassicBeers}`)
+    fetch(`https://api.punkapi.com/v2/beers?per_page=80${fetchBeersByName}${getHighABVBeers}${getClassicBeers}`)
       .then((response) => response.json())
       .then((jsonResponse) => setBeers(jsonResponse)
       );
-  };
+  };  
+
+  beers.forEach(beer => {
+    beer.isFav = false;
+  });
 
   useEffect(() => {
     getBeerData(getBeersByName);
   }, [getBeersByName, getHighABVBeers, getClassicBeers]);
 
-  console.log(beers);
+  //console.log(beers);
+
+
+
+  //console.log(beers);
 
   return (
     <>
       <section className={styles.navBarApp}>
         <NavBar
+          toggleFav={toggleFav}
           handleSearchInput={handleSearchInput}
           filterHighABVBeers={filterHighABVBeers}
           highABVBeers={highABVBeers}
@@ -66,7 +79,7 @@ const App = () => {
         />
       </section>
       <section className={styles.mainApp}>
-        <Routes beers={beers} />
+        <Routes beers={beers} toggleFav={toggleFav} />
       </section>
     </>
   );
