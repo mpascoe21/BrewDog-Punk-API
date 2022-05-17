@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/brewdog-punk-api/static/css/main.d9e9b526.css",
+    "main.js": "/brewdog-punk-api/static/js/main.39c6ddd1.js",
+    "static/js/787.7436268a.chunk.js": "/brewdog-punk-api/static/js/787.7436268a.chunk.js",
+    "static/media/NotFoundImg.jpg": "/brewdog-punk-api/static/media/NotFoundImg.01d30fdaafa0e3c2bf5b.jpg",
+    "static/media/logo.png": "/brewdog-punk-api/static/media/logo.33c64b7ecfccebb9a07e.png",
+    "index.html": "/brewdog-punk-api/index.html",
+    "main.d9e9b526.css.map": "/brewdog-punk-api/static/css/main.d9e9b526.css.map",
+    "main.39c6ddd1.js.map": "/brewdog-punk-api/static/js/main.39c6ddd1.js.map",
+    "787.7436268a.chunk.js.map": "/brewdog-punk-api/static/js/787.7436268a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d9e9b526.css",
+    "static/js/main.39c6ddd1.js"
+  ]
+}
