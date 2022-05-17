@@ -52,6 +52,7 @@ const App = () => {
       );
   };  
 
+  // Adds isFav to each beer
   beers.forEach(beer => {
     beer.isFav = false;
   });
@@ -60,7 +61,7 @@ const App = () => {
     getBeerData(getBeersByName);
   }, [getBeersByName, getHighABVBeers, getClassicBeers]);
 
-  //console.log(beers);
+  console.log(beers);
 
 
 

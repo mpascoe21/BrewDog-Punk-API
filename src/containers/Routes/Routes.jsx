@@ -12,7 +12,7 @@ const Routes = (props) => {
   return (
     <Router>
       <Main path='/' beers={beers} toggleFav={toggleFav} />
-      <FavouriteBeers path='favouritebeers' beers={beers} />
+      <FavouriteBeers path='favouritebeers' beers={beers} toggleFav={toggleFav}/>
       <NotFound default />
     </Router>
   )

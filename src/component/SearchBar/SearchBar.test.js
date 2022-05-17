@@ -1,7 +1,7 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 import SearchBar from './SearchBar';
 
-describe('SearchBar', ()=> {
+describe('SearchBar', () => {
   it('should render input element', async () => {
     render(<SearchBar placeholder={'Search...'} />);
     const inputElement = screen.getByPlaceholderText(/Search.../i);
