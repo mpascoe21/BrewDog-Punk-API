@@ -31,12 +31,12 @@ const NavBar = (props) => {
       <Link to='favouritebeers' className={styles.favourites} >
         <label className={styles.heartLabel} htmlFor="">Favourites</label>
         <i className={styles.heart}>
-          <FontAwesomeIcon icon={solidFaHeart} />
+          <FontAwesomeIcon icon={lightFaHeart} />
         </i>
       </Link>
     ) : (      
       <Link to='favouritebeers' >
-        <FontAwesomeIcon icon={solidFaHeart} />
+        <FontAwesomeIcon icon={lightFaHeart} />
       </Link>
     );
 

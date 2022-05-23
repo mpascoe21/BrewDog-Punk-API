@@ -11,6 +11,14 @@ const CardList = (props) => {
     </div>
   );
 
+  // const { beers, toggleFav, addToFav, favState } = props;
+
+  // const getBeerCardJsx = (beer) => (
+  //   <div data-testid='beerContainer' key={beer.id}>
+  //     <BeerCard beer={beer} toggleFav={toggleFav} addToFav={addToFav} favState={favState} />
+  //   </div>
+  // );
+
   return (
     <section className={styles.cardList}>
 
@@ -24,4 +32,4 @@ const CardList = (props) => {
   )
 }
 
-export default CardList
+export default CardList;

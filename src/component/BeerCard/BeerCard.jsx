@@ -6,7 +6,8 @@ import { faHeart as solidFaHeart } from "@fortawesome/free-solid-svg-icons";
 import { faHeart as lightFaHeart } from "@fortawesome/free-regular-svg-icons";
 
 const BeerCard = (props) => {
-  const { name, image_url, tagline, description, abv, food_pairing, isFav } = props.beer;
+  const { id, name, image_url, tagline, description, abv, food_pairing, isFav } = props.beer
+  //const { toggleFav, addToFav, favState } = props;
   const { toggleFav } = props;
 
   const [favState, setFavState] = useState(isFav);
@@ -26,8 +27,9 @@ const BeerCard = (props) => {
 
   return (
     // <p>BeerCard work</p>
-    <div className={styles.beerCard}>
-      <i className={styles.heart} onClick={handleFavClick}>
+    <div className={styles.beerCard} data-testid='beerCard' key={id}>
+      {/* <i className={styles.heart} onClick={() => addToFav(props.beer)}> */}
+      <i className={styles.heart} onClick={handleFavClick}> 
         <FontAwesomeIcon icon={heartIcon} />
       </i>
       <p className={styles.beerName}>{name}</p>
