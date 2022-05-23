@@ -109,10 +109,11 @@
       width: 100%;
       position: absolute;
       top: 360px;
+      text-decoration: none;
 
       .heartLabel {
         color: $color-white;
-        font-size: 1em;
+        font-size: 1em;        
       }
 
       .heart {    
