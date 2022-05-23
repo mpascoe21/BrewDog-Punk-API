@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './FilterItem.module.scss';
 
 const FilterItem = (props) => {
-  const { name, filterBeers, isChecked } = props;
+  const { name, filterBeers } = props;
 
   // const [isChecked, setIsChecked] = useState(false);
 
@@ -11,9 +11,8 @@ const FilterItem = (props) => {
   // }
   return (
     <li className={styles.filterItem}>
-      {/* {name} */}
-      <label className={styles.label} htmlFor={name}>{name}</label>
-      <input className={styles.input} type="checkbox" name={name} onChange={filterBeers} />      
+      <label data-testid='label' className={styles.label} htmlFor={name}>{name}</label>
+      <input  data-testid='checkbox' className={styles.input} type="checkbox" name={name} onChange={filterBeers} />      
     </li>
   )
 }
