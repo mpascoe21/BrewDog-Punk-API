@@ -4,6 +4,7 @@ import NotFound from '../../component/NotFound';
 import styles from './FavouriteBeers.module.scss';
 
 const FavouriteBeers = (props) => {
+  //const { beers } = props;
   const { beers, toggleFav } = props;
   const [favouriteBeers, setFavouriteBeers] = useState(beers.filter(beer => beer.isFav))
 
@@ -12,7 +13,7 @@ const FavouriteBeers = (props) => {
     setFavouriteBeers(beers.filter((beer) => beer.isFav));
   }
 
-  const contenJsx = favouriteBeers.length ? (
+  const contentJsx = favouriteBeers.length ? (
     <CardList beers={favouriteBeers} toggleFav={removeFromFav} />
   ) : (
     <NotFound />
@@ -20,9 +21,9 @@ const FavouriteBeers = (props) => {
 
   return (
     <section className={styles.fav} id='fav'>
-      {contenJsx}
+      {contentJsx}
     </section>
   )
 }
 
-export default FavouriteBeers
+export default FavouriteBeers;

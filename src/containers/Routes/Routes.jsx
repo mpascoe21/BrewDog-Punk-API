@@ -7,10 +7,12 @@ import NotFound from '../../component/NotFound';
 
 
 const Routes = (props) => {
+  //const { beers, toggleFav, favouritedBeers, addToFav, favState } = props;
   const { beers, toggleFav } = props;
-
   return (
     <Router>
+      {/* <Main path='/' beers={beers} toggleFav={toggleFav} addToFav={addToFav} favState={favState} />
+      <FavouriteBeers path='favouritebeers' favouritedBeers={favouritedBeers} beers={beers} toggleFav={toggleFav}/> */}
       <Main path='/' beers={beers} toggleFav={toggleFav} />
       <FavouriteBeers path='favouritebeers' beers={beers} toggleFav={toggleFav}/>
       <NotFound default />
@@ -18,4 +20,4 @@ const Routes = (props) => {
   )
 }
 
-export default Routes
+export default Routes;
