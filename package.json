@@ -1,6 +1,6 @@
 {
   "name": "brewdog-punk-api",
-  "homepage": " https://mpascoe21.github.io/BrewDog-Punk-API/",
+  "homepage": "https://mpascoe21.github.io/BrewDog-Punk-API/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
