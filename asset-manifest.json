@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/BrewDog-Punk-API/static/css/main.09cad3c8.css",
-    "main.js": "/BrewDog-Punk-API/static/js/main.1abfad26.js",
+    "main.js": "/BrewDog-Punk-API/static/js/main.c4f59502.js",
     "static/js/787.7436268a.chunk.js": "/BrewDog-Punk-API/static/js/787.7436268a.chunk.js",
     "static/media/NotFoundImg.jpg": "/BrewDog-Punk-API/static/media/NotFoundImg.01d30fdaafa0e3c2bf5b.jpg",
     "static/media/logo.png": "/BrewDog-Punk-API/static/media/logo.33c64b7ecfccebb9a07e.png",
     "index.html": "/BrewDog-Punk-API/index.html",
     "main.09cad3c8.css.map": "/BrewDog-Punk-API/static/css/main.09cad3c8.css.map",
-    "main.1abfad26.js.map": "/BrewDog-Punk-API/static/js/main.1abfad26.js.map",
+    "main.c4f59502.js.map": "/BrewDog-Punk-API/static/js/main.c4f59502.js.map",
     "787.7436268a.chunk.js.map": "/BrewDog-Punk-API/static/js/787.7436268a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.09cad3c8.css",
-    "static/js/main.1abfad26.js"
+    "static/js/main.c4f59502.js"
   ]
 }
