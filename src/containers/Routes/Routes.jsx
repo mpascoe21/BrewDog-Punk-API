@@ -13,7 +13,7 @@ const Routes = (props) => {
     <Router>
       {/* <Main path='/' beers={beers} toggleFav={toggleFav} addToFav={addToFav} favState={favState} />
       <FavouriteBeers path='favouritebeers' favouritedBeers={favouritedBeers} beers={beers} toggleFav={toggleFav}/> */}
-      <Main path='/' beers={beers} toggleFav={toggleFav} />
+      <Main path='/BrewDog-Punk-API' beers={beers} toggleFav={toggleFav} />
       <FavouriteBeers path='favouritebeers' beers={beers} toggleFav={toggleFav}/>
       <NotFound default />
     </Router>
